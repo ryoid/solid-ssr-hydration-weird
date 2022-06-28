@@ -1,3 +1,5 @@
+import TrendingBanner from "../components/TrendingBar";
+
 const Layout = (props) => {
   const renderedPage = () => {
     const { Page } = props.route();
@@ -7,7 +9,9 @@ const Layout = (props) => {
   return (
     <div>
       <nav>
-        <a href="/">Link to: "/"</a>
+        <div>
+          <TrendingBanner />
+        </div>
       </nav>
       <main>{renderedPage()}</main>
     </div>
